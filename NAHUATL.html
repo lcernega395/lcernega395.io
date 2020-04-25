@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!-- Es aconsejable que todos los documentos HTML lleven su correspondiente etiqueta <title</title> -->
+		<title>
+			Náhuatl
+		</title>
+    
+		<!-- Establece la tabla de caracteres para el documento -->
+		<meta charset="utf-8">
+    
+		<!-- Asignamos estilos básicos para el documento -->
+		<style>
+
+						
+			/* Asignamos estilos al elemento [HTML], con un fondo especial */		
+			html {
+				height: 100%;
+				width: 100%;
+				box-sizing: border-box;
+				background-color: rgb(245, 245, 245);
+				background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cb/Huitzilopochtli_telleriano.jpg);	/* Imagen de fondo */
+				background-position: center  0;												/* Ubicación de la imagen de fondo */
+				background-attachment: fixed;												/* Posición de la imagen respecto de la página */
+				background-size: cover;														/* La imagen cubre el total del fondo, aunque para ello tenga que expandirse*/
+			
+			}
+			
+
+			/* Asignamos un estilo general (a partir de [HTML]) por el cual las dimensiones de las cajas se miden incluyendo los bordes */
+			* {
+				box-sizing: inherit;
+			}
+			
+			/* Asignamos al cuerpo del documento márgenes, bordes, fuentes y tamaños de fuentess */
+			body {
+				width: 85%;
+                height: auto;
+                min-height: 100%;
+				margin: auto;
+				padding: 0;
+                background-color: rgb(255, 255, 255);
+				opacity: .9;
+				border: 3px solid green;
+				font-family: 'Comic Sans MS', Georgia, 'Helvetica Neue', serif;
+                font-size: 14px;
+                color: #333;
+			}
+        
+			section {
+			display:flex;
+			}
+		
+			header {
+				
+				margin: auto;
+				font-size: 1.5em;
+				text-align: center;
+				background-color: #81DAF5;
+				
+			}
+
+			
+
+			footer {
+				font-size: 1.3rem;
+				background-color: #81DAF5;
+				color: blue;
+				border: 2px double blue;
+				text-align: center;
+			}
+			
+			table, th, td{
+				
+				border: 1px solid black;
+				border-collapse: collapse;
+				margin: 15px;
+				padding: 3.5px;
+			}
+
+			
+
+
+			
+			/* 	Asignamos estilo básico (centrado) a los headings [H1] - [H6] */
+
+			h1 {
+				margin: 0;
+				font-family: Tahoma;
+				font-size: medium;
+				letter-spacing: 0.9em;
+				margin-top: 15px; 
+				margin-bottom: none;
+				margin: 15px;
+			}
+        
+			/* Estilos especiales para [H] */
+			header {
+				color: #008000;
+				background-image: linear-gradient(to top, yellow, white);
+				margin: 0;
+				font-size: 40px;
+				border: none;
+				line-height: 60px;
+				font-family: algerian;
+			}
+			
+			
+			h2 {
+				background-image: linear-gradient(to left, orange, yellow, white, white, yellow, orange);
+				color: red;
+				size: 15px;
+				font-size: x-large;
+				text-align: center;	
+			}
+				
+			h3 {
+				color: brown;
+				font-size: larger;
+				border: none;
+				text-align: center;
+			}
+				
+			h4 {
+				font-size: large;
+				font-family: sans-serif;
+				text-align: center;
+				border-right: 1px solid #777;
+				border-top: 1px solid #777;
+				border-bottom: 1px solid #777;
+				color: brown;
+			}
+
+			
+			/* Asignamos estilos a los párrafos: con márgenes, alineación de texto y tamaño de fuente */
+			p {
+				width: auto;
+				margin: 10px;
+				font-size: 1em;
+				text-indent: 1.5em;
+				text-align: justify;
+				color: black;
+			}
+			
+			img{
+				float: right;
+				margin: 10px 10px 10px;
+			}
+			
+			video {
+				float: right;
+				margin: 10px 10px 10px;
+			}
+			
+			table {
+				text-align: center;
+			}
+			
+			th {
+				background-color: #f2e6ff;
+				font-weight: bold;
+				font-color: black;}
+				
+			/* Ocultar botón */
+			input[id^="desplegable"]{
+				display: none;
+			}
+			
+			/* Estilo botón desplegable */
+			input[id^="desplegable"] + label {
+				display: block;
+				margin: 0 auto;
+				padding: 5px 20px;
+				cursor: pointer;
+			}
+
+			/* Estilo caja historia (inicialmente oculto) */
+			input[id^="desplegable"] ~ .desplegable {
+				width: 90%;
+				height: 0;	
+				opacity: 0;	
+				margin: 10px auto 0;
+			}
+			
+			/* Estilo caja SPOILER cuando su INPUT está seleccionado */
+			input[id^="desplegable"]:checked + label + .desplegable{
+				height: auto;
+				opacity: 1;
+			}
+			
+			.desplegable {
+			display: flex;
+			flex-direction: column;
+			}
+			
+			
+			.img-zoom {
+				transition: all ease-out .5s;
+			}
+			
+			.img-zoom:hover {
+				cursor: pointer;
+				transform: scale(3, 3);
+				transition: all ease-out 1s;
+			}
+			
+			section {
+				display: flex;
+			}
+			
+			section section {
+				display: flex;
+				flex-direction: column;
+				
+			}
+			 
+			 div {
+				display: flex;
+				flex-direction: row;
+			}
+			
+
+			iframe {
+				margin: 0 auto;
+				border: 5px outset black;
+			}
+			
+			
+			.palabras {
+				display: flex;
+				justify-content: space-around;}
+					
+			figure {
+				margin: 10px;
+				border: 0.5px solid grey;
+				text-align: center;
+			}
+				
+			div figure:nth-child(odd){
+				color: blue;
+				font-weight: bold;
+				background-color: #e6ffe6;
+			}
+			
+			div figure:nth-child(even){
+				color: purple;
+				font-style: italic;
+				font-weight: bold;
+				background-image: url(https://t3.ftcdn.net/jpg/01/24/37/92/500_F_124379281_FmZIuheAxDNGGkiENyXWDH85Bg5aNICS.jpg);
+			}
+			
+			div table {
+				display: flex;
+				flex-direction: column;}
+				
+			.recuadro {
+				border: 5px outset grey;
+				padding: 5px;
+				margin: 10px;
+				display: block;
+			}
+			
+			.consonantes {
+				display: flex;
+				justify-content: center;
+			}
+			
+			.vocales {	
+				display: flex;
+				justify-content: space-around;
+			}
+			
+			.tabla_escritura {
+				display: flex;
+				justify-content: center;
+			}
+			
+			
+		</style>
+	</head>
+	
+<body>
+	<header>Náhuatl</header>
+	<h1>ÍNDICE</h1>
+	<nav style="display: flex; justify-content: space-around">
+ 		<section>	
+			<ol>	
+				<li><a href="#introduction">Introducción</a></li>
+				<li><a href="#clas-ling">Clasificación lingüística</a></li>
+				<li><a href="#historia">Historia</a></li>
+					<ul>
+						<li>Época prehispánica</li>
+						<li>Periodo colonial</li>
+						<li>Época moderna</li>
+					</ul>	
+				<li><a href="#Distribución y variantes dialectales">Distribución y variantes dialectales</a></li>
+						<ol>
+							<li><a href="#Náhuatl Central">Náhuatl Central</a></li>
+								<ul>
+									<li>Náhuatl clásico</li>
+									<li>Náhuatl de Morelos</li>
+									<li>Náhuatl de Tlaxcala</li>
+									<li>Náhuatl de Tetelcingo</li>
+								</ul>
+							<li><a href="#Náhuatl Oriental">Náhuatl Oriental</a></li>
+								<ul>	
+									<li>Náhuatl de Guerrero</li>
+									<li>Náhuatl del Istmo</li>
+									<li>Náhuatl de la Sierra Norte de Puebla</li>
+									<li>Náhuatl huasteco</li>
+								</ul>
+							<li><a href="#Náhuatl de la Periferia Occidental">Náhuatl de la Periferia Occidental</a></li>
+								<ul>
+									<li>Náhuatl de Michoacán</li>
+									<li>Náhuatl de Jalisco</li>
+									<li>Mexicanero</li>
+									<li>Pipil</li>
+									<li>Pochuteco</li>
+								</ul>
+						</ol>
+			</ol>
+		</section>
+		
+		<section>
+			<ol start="5"> 
+					<li><a href="#Enseñanza del náhuatl">Enseñanza del náhuatl</a></li>
+					<li><a href="#Escritura">Escritura</a></li>
+								<ul>
+									<li>Tabla lexicográfica comparativa</li>
+								</ul>
+					<li><a href="#literatura">Literatura</a></li>
+								<ul>
+									<li>Mitos</li>
+									<li>Música</li>
+								</ul>
+					<li><a href="#otros-idiomas"> El náhuatl y otros idiomas</a></li>
+								<ul>
+									<li>Influencia del náhuatl al español</li>
+									<li>Influencia del español al náhuatl</li>
+								</ul>
+					<li><a href="#Descripción lingüística">Descripción lingüística</a></li>
+						<ul>
+							<li><a href="#Fonología">Fonología</a></li>
+							<li><a href="#Morfología">Morfología</a></li>
+							<li><a href="#Sintaxis">Sintaxis</a></li>
+				
+						</ul>
+			</ol>
+		</section>
+
+	</nav>
+	<h2><a href="#table-index" id="introduction"><a href="#top">Introducción</a></a></h2>
+		<p>El náhuatl (autoglotónimo nāhuatlahtōlli, que deriva de nāhua-tl, «sonido claro o agradable» y tlahtōl-li, «lengua o lenguaje») es una macrolengua yuto-nahua que se habla en México. Surgió por lo menos desde el siglo V, aunque al darse la diferenciación entre el yuto-nahua del sur y el proto-nahua (c. siglo III) ya es posible hablar de una lengua náhuatl. Con la expansión de la Cultura Coyotlatelco durante los siglos V y VI en Mesoamérica, el náhuatl comenzó su rápida difusión por el Eje Neovolcánico llegando una rama a extenderse por la costa del Pacífico dando origen al pochuteco y otra rama hacia Veracruz que daría origen al pipil de Centroamérica. Así poco a poco el náhuatl pasó por encima de otras lenguas mesoamericanas hasta convertirse en lingua franca de buena parte de la zona mesoamericana; en una primera etapa fue promovida en el área central de México por los tepanecas, posteriormente en una segunda etapa esta lengua, en parte, fue impuesta en los territorios conquistados por el Imperio mexica, también llamado Imperio azteca, desde el siglo XIV.</p>
+		<p>El náhuatl comenzó a perder hablantes conforme se fueron imponiendo los españoles en el continente, junto con el castellano como nueva lengua dominante en Mesoamérica; sin embargo, los europeos siguieron usando el náhuatl con propósitos de conquista a través de los misioneros, llevando la lengua a regiones donde previamente no había influencia náhuatl.</p>			
+	
+	<h2> <a name="clas-ling" id="clas-ling"></a> <a href="#top">Clasificación lingüística</a> </h2>
+		<section>
+				<p style="flex-basis: 30%;"> El náhuatl pertenece a la familia yuto-nahua (uto-azteca) el cual tiene una división prehistórica en “yuto-nahua del norte” y “yuto-nahua del sur”, de esta última rama se desarrollaron cuatro grupos, de estos el grupo “Nahuatlano” también llamado “nahuano” o “aztecano” es el que da origen al náhuatl. La división Yuto-nahua del sur / Nahuatlano es el momento en que surge el Proto-nahua, que es el ancestro de todas las variantes. Según algunos autores la primera división del proto-nahua dio origen al extinto pochuteco, quedando por otro lado lo que los lingüistas norteamericanos llaman General Aztec o náhuatl nuclear según el INALI, el que a su vez se divide en dos ramas, tenemos Náhuatl Occidental y el Náhuatl Oriental, por último, la rama occidental se divide en Náhuatl de la Periferia Occidental y Náhuatl central.</p>
+		
+			<section style="flex-basis: 40%;">
+				<p>Desde un punto de vista tipológico, resalta su importancia como ejemplo de lengua polisintética y aglutinante particularmente en la morfología verbal y en la formación del léxico (idioma en el que los morfemas se unen y fusionan para crear  nuevas palabras. La mayoría de las lenguas amerindias son aglutinantes y el náhuatl lo es en un alto grado, al igual que el sumerio y el esquimal. No emparentada con el indoeuropeo, aglutinante, de acentuación grave.). Tipológicamente es además una lengua de núcleo final, en la que el modificador suele preceder al núcleo modificado </p>
+				<img style="float:none; margin: 0 auto" class="img-zoom" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Mapa_Lenguas_del_Mundo.png" width="300" />
+			</section>
+
+		<section style="flex-basis: 40%">
+				<ul>
+					<li>Sinónimos: 	Mexicano o azteca.</li>
+					<li>Tronco: 	Yutonahua (Uto-aztecan), amerindia (Amerindian)</li>
+					<li>Familia: 	Náhuatl</li>
+					<li>Parientes: 	familias corachol (cora, huichol), pimana (pápago, tepehuán y pima bajo, névome) y taracahita (huarijío, mayo, tarahumara y yaqui).</li>
+					<li>Hablantes: 	Más de millón y medio, la mayoría bilingüe con el español.</li>
+					<li>Historia: 	La lengua del imperio mexicano, hablada desde el siglo XIV hasta ahora.</li>
+					<li>Sonidos: 	4 vocales (a, e, i, o), 2 semivocales (u, y) y 12 consonantes (ch, h, k, l, m, n, p, s, t, ts, tl, x).</li>
+					<li>Lugar: 	Desde el norte de México hasta Centroamérica.</li>
+					<li>Escritura: 	Antiguamente ideográfica con algunos trozos silábicos, ahora alfabética con caracteres latinos.</li>
+				</ul>
+			</section>
+		</section>
+		
+		<input type="checkbox" id="desplegable1"></input>
+		<label for="desplegable1"><h2 style="border-left: 3px solid #777; border-right: 3px solid #777;">
+
+
+			</a> <img src="https://image.freepik.com/iconos-gratis/signo-de-adicion_318-70167.jpg" width="20" /></a>
+			<a name="historia" id="historia"><a href="#top">
+Historia </a></a>
+</h2></label> 
+
+		<div class="desplegable">
+			<h3>Época prehispánica</h3>
+			<div style="overflow: auto; height: 300px; text-align: justify">Sobre la cuestión del punto geográfico de origen, los lingüistas durante el siglo XX coincidieron en que la familia de lenguas yuto-nahuas se originó en el suroeste de los Estados Unidos. Tanto la evidencia de la arqueología y la etnohistoria es compatible con una difusión hacia el sur a través del continente americano; este movimiento de comunidades hablantes se da en varias oleadas desde los desiertos del norte de México al centro de México. El proto-nahua por lo tanto surgió en la región entre Chihuahua y Durango donde al ocupar una mayor extensión de territorio, formó rápidamente dos variantes, una que continuó dispersando hacia el sur con cambios innovadores mientras la otra con rasgos conservadores del yuto-nahua se desplazó al oriente. La migración propuesta de hablantes de la lengua proto-nahua en la región mesoamericana se ha colocado en algún momento alrededor del año 500, hacia el final del período Clásico Temprano en la cronología mesoamericana. Antes de llegar al centro de México, grupos pre-nahuas probablemente pasaron un periodo de tiempo en contacto con las lenguas cora y huichol del occidente de México (que también son uto-aztecas). El surgimiento del náhuatl y sus variantes por lo tanto se da durante la época del apogeo de Teotihuacán. Las rutas comerciales teotihuacanas sirvieron para una rápida difusión de la nueva lengua. La identidad de la lengua hablada por los fundadores de Teotihuacán nos es desconocida, sin embargo, durante mucho tiempo ha sido objeto de debate; de esta manera en los siglos XIX y XX algunos investigadores creían que Teotihuacán había sido fundada por hablantes de náhuatl; más tarde hacia finales del siglo pasado la investigación lingüística y arqueológica tiende a contradecir ese punto de vista. Ahora se cree que es más probable que la lengua teotihuacana estuviera relacionada con el totonaco o fuera de origen mixe-zoqueano. Buena parte de la migración nahua al centro de México fue consecuencia y no causa de la caída de Teotihuacán. Desde estas épocas tempranas se dieron préstamos entre las diferentes familias lingüísticas e incluso a nivel morfosintáctico. En Mesoamérica las familias de la lengua maya, otomangue y mixe-zoque habían coexistido durante milenios. La interacción de estas lenguas generó una serie de rasgos comunes en todas ellas que permiten que entendamos la zona mesoamericana como una sola a nivel lingüístico, independientemente de la evolución de cada lengua en su propio grupo. Después que los nahuas llegaron a la zona de alta cultura de Mesoamérica, su lengua también adoptó algunos de los rasgos que definen el área lingüística mesoamericana; así por ejemplo los nahuas adoptaron el uso de sustantivos relacionales y una forma de construcción posesiva típica de las lenguas mesoamericanas. Teotihuacán ejercía un poder centralista y marcaba las pautas de los señoríos locales, quienes al parecer tenían que ser legitimados desde la metrópolis. Tras el colapso de la gran ciudad surgieron modelos nuevos para detentar el poder, junto con estos modelos al parecer se fue promoviendo la lengua náhuatl la cual se considera difundida por la cultura Coyotlatelco, sin embargo, la lengua no solo fue hablada por sus nativos, sino que poco a poco fue adoptada por las poblaciones otomangues con mayor antigüedad y que habían dependido de Teotihuacán. Al fundarse Tula Chico en el siglo VII ya se sentía la influencia nahua pero no era muy intensa; trescientos años después con la re-fundación de esta ciudad por el año 900, que a partir de entonces será conocida como “Tollan” (Tula), sus fundadores son reconocidos por las fuentes como “nahuas-chichimecas” quienes comparten el poder con los nonohualcas. Es en este momento que el náhuatl adquiere relevancia política, poco después se volverá el idioma oficial de los tepanecas (que hablaban originalmente una variante del otomí), y ya en el siglo XIV fue adoptado por los acolhuas de Tetzcoco. Aunque los mexicas se cree que siempre hablaron el náhuatl es posible que también lo hayan adoptado. La influencia política y lingüística de este grupo llegó a extenderse en la América media y el náhuatl se convirtió en una lengua franca entre los comerciantes y las élites en Mesoamérica, por ejemplo entre los mayas quiché. Tenochtitlan creció hasta convertirse en el mayor centro urbano mesoamericano, esto atrajo a los hablantes de náhuatl de otras áreas donde se había extendido por siglos previamente, con lo que se dio a luz a una nueva forma urbana de náhuatl con rasgos de muchos dialectos. Esta variedad urbanizada de Tenochtitlan-Tlatelolco es lo que llegó a ser conocido como náhuatl clásico y fue ampliamente documentado en la época colonial.<img  src="http://eleconomista.com.mx/files/imagecache/eco2014_650x433/files/pulque1f.jpg" width="300" height="150" /> </div>				
+			
+			<section style="margin: 20px;">					
+			<h3>Período colonial</h3>
+			<div style="overflow: auto; height: 250px;text-align: justify"> Con la llegada de los españoles al corazón de México en 1519 la situación del idioma náhuatl cambiaría de manera significativa; por un lado comienza un desplazamiento por la lengua española; por el otro, su uso oficializado para la comunicación con los nativos generó el establecimiento de nuevos asentamientos; a la vez se dio la creación de una amplia documentación en escritura latina, con lo cual se asienta un registro fidedigno para su preservación y comprensión, por lo que el idioma siguió siendo importante en las comunidades nahuas bajo el dominio español. Página 51 del Libro IX del Códice Florentino. Texto Náhuatl escrito con caracteres latinos. Los españoles se dieron cuenta de la importancia que tenía la lengua y prefirieron continuar con su uso que cambiarla, también encontraron que el aprendizaje de todas las lenguas indígenas de lo que ellos llamarían Nueva España era imposible en la práctica, por lo que se concentraron en el náhuatl. Inmediatamente después de la Conquista, los misioneros fransicanos fundaron escuelas —como el Colegio de Santa Cruz de Tlatelolco en 1536— para la nobleza indígena con el propósito de re-educarlos dentro de los cánones occidentales, donde aprendían teología, gramática, música, matemáticas. A la vez los misioneros emprendieron la redacción de gramáticas, llamadas en esa época “artes”, de las lenguas indígenas para su uso por parte de sacerdotes. La primera gramática náhuatl escrita en 1531 por los franciscanos se encuentra perdida, la más antigua que se preserva fue escrita por Andrés de Olmos y publicada en 1547. Hacia el año de 1645 tenemos noticia de cuatro obras más publicadas cuyos autores son, en 1571 Alonso de Molina, en 1595 Antonio del Rincón, en 1642 Diego de Galdo Guzmán y en 1645 Horacio Carochi. Este último es considerado hoy en día el más importante de los gramáticos de la época colonial. Carochi ha sido especialmente importante para los investigadores que trabajan en la nueva filología, debido a su enfoque científico que precede a las investigaciones lingüistas modernas, analiza más a detalle los aspectos fonológicos que sus predecesores e incluso sucesores, quienes no habían tomado en cuenta la pronunciación del cierre glotal (saltillo) que es en realidad una consonante o la longitud vocal. Manuscrito sobre el idioma por Fray Joseph de Carranza del siglo XVIII. En 1570 el rey Felipe II de España decretó que el náhuatl debía convertirse en la lengua oficial en la Nueva España con el fin de facilitar la comunicación entre los españoles y los nativos de las colonias. Durante este período la Corona española permite un alto grado de autonomía en la administración local de los pueblos indígenas, y en muchos pueblos la lengua náhuatl era la oficial de hecho, tanto escrita como hablada. Durante los siglos XVI y XVII, el náhuatl clásico se utilizó como lengua literaria, y un gran corpus de documentos de ese período sobrevivió hasta nuestros días. Las obras de este período incluyen historias, crónicas, poesía, obras de teatro, obras canónicas cristianas, descripciones etnográficas y documentos administrativos. Como ejemplos podemos citar el Códice Florentino, un compendio de doce volúmenes de la cultura mexica compilado por el franciscano Bernardino de Sahagún; la Crónica Mexicáyotl de Fernando Alvarado Tezozómoc que relata el origen y el linaje real de Tenochtitlán; los Cantares mexicanos que son una colección de poemas en náhuatl; el diccionario compilado por Alonso de Molina náhuatl-español y español-náhuatl el cual sigue siendo básico para la lexicología moderna; y el Huei tlamahuiçoltica, una de las descripciones en náhuatl de la aparición de la Virgen de Guadalupe. Durante un tiempo, la situación lingüística en la Nueva España se mantuvo relativamente estable pero en 1686 el rey Carlos II emitió una real cédula que prohíbe el uso de cualquier idioma distinto del español en todo el Imperio español, reiterándola en 1691 y 1693, en las que dicta la creación de la “parcela escolar” para la enseñanza del idioma imperial. Otro decreto el 10 de mayo de 1770, ahora de Carlos III, estableció la creación de nuevos centros de enseñanza completamente en castellano para la nobleza indígena y se deshizo del náhuatl clásico como lengua literaria, aunque hasta la Independencia de México en 1821, los tribunales españoles aún admitían testimonios en náhuatl y documentación como prueba en los juicios, con traductores judiciales que exponían en español. La situación indígena y del habla náhuatl al inicio del movimiento de la Independencia en realidad había sido sostenido pues el 66 % de la población era indígena de los 6 millones de habitantes del país. Los indicadores demográficos muestran un crecimiento paralelo al de la población mestiza de México. Las comunidades nahuas ya habían asimilado el cristianismo de manera sincrética, además eran parte fundamental de la fuerza productiva del país; su desarrollo local se fincaba en una tradición ya consumada durante los últimos 300 años y que había generado pocos cambios en su organización social y cultural, de hecho, muchas de esas manifestaciones sobrevivieron hasta nuestros días.</div>
+								
+			<h3> Época moderna</h3>
+			<div style="overflow: auto; height: 250px; text-align: justify"> A lo largo de la época moderna, la situación de las lenguas indígenas ha aumentado en precariedad cada vez más en México, y el número de hablantes de prácticamente todas las lenguas indígenas ha disminuido. A pesar de que el número absoluto de hablantes de náhuatl en realidad ha aumentado en el último siglo, las poblaciones indígenas se han vuelto cada vez más marginadas en la sociedad mexicana. Los grandes cambios en las comunidades indígenas se dieron a partir de las reformas agrarias emergidas del revolucionario Plan de Ayutla por medio de la “Ley Lerdo” a mediados del siglo XIX, con lo cual se instalaba la noción de “ejido” que fraccionaba las tierras comunales. A partir de entonces los indígenas se vieron forzados a pagar una serie de nuevos impuestos bajo la coacción de hacendados y gobierno. Al no poder pagarlos, se crearon grandes latifuncios, perdiendo así poco a poco sus tierras, identidad, lengua e incluso su libertad. Este proceso aceleró los cambios en la relación asimétrica entre las lenguas indígenas y el castellano, así el náhuatl se vio cada vez más influenciado y modificado; como primera consecuencia es observable una zona de una rápida perdida del habla y las costumbres cercana a las grandes ciudades, como segunda consecuencia vemos zonas donde la “castellanización” es más fuerte provocando un bilingüismo activo, en una tercera zona se mantuvieron los hablantes indígenas más aislados y conservaron más puras sus tradiciones. Las políticas porfirianas tendían a la eliminación de las lenguas nativas, buscando el desarrollo y el progreso del país bajo un nacionalismo mexicano, política seguida por los gobiernos post-revolucionarios. Sólo hasta el gobierno cardenista surge un verdadero interés institucional por comprender y estudiar la cultura indígena, intentando revertir la tendencia de la incorporación forzada a la cultura nacional, lo que de hecho no pasó y continuó la pérdida hasta 1980, donde se empezaron a dar los primeros cambios significativos, aunque las políticas educativas en México se centraron en la castellanización de las comunidades indígenas, para enseñar puramente español y desalentar el uso de las lenguas nativas, tuvo como resultado que hoy en día un buen número de hablantes de náhuatl estén en posibilidad de escribir tanto su lengua como el español; aun así su tasa de alfabetización en español sigue siendo muy inferior a la media nacional. A pesar de ello, el náhuatl todavía es hablado por más de un millón de personas, de los cuales alrededor del 10 % son monolingües. La supervivencia del náhuatl en su conjunto no está en peligro inminente, pero la supervivencia de ciertos dialectos sí lo está; y algunos dialectos ya se han extinguido durante las últimas décadas del siglo XX. La década de 1990 vio la aparición de cambios diametrales en las políticas del gobierno mexicano hacia los derechos indígenas y lingüísticos. La evolución de los acuerdos en el ámbito de los derechos internacionales combinada con presiones internas condujeron a reformas legislativas y la creación de organismos gubernamentales descentralizados; así, ya para el 2001 el Instituto Nacional Indigenista desapareció para darle paso a la CDI (Comisión Nacional para el Desarrollo de los Pueblos Indígenas) y el INALI creado en 2003 con responsabilidades para la promoción y protección de las lenguas indígenas, en particular la Ley general de Derechos Lingüísticos de los Pueblos indígenas reconoce todas las lenguas indígenas del país, incluyendo el náhuatl, como "idiomas nacionales" y da a los indígenas el derecho a utilizarlos en todas las esferas de la vida pública y privada. En el artículo 11, que garantiza el acceso a la educación obligatoria, bilingüe e intercultural. Esta ley da origen al Catálogo de las Lenguas Indígenas Nacionales en 2007. En 1895, el náhuatl era hablado por más del 5 % de la población. Para el año 2000, esta proporción había caído a 1,49 %. Teniendo en cuenta el proceso de marginación combinada con la tendencia de la migración a las zonas urbanas y a los Estados Unidos, algunos lingüistas están advirtiendo sobre la muerte inminente de las lenguas.39 En la actualidad se habla en náhuatl sobre todo en las zonas rurales por una clase empobrecida de agricultores de subsistencia indígenas. De acuerdo con el Instituto Nacional de Estadísticas de México, el INEGI, el 51 % de los hablantes de náhuatl están involucrados en el sector agrícola y 6 de cada 10 no reciben sueldos o ganan menos del salario mínimo. En 1895, el náhuatl era hablado por más del 5 % de la población. Para el año 2000, esta proporción había caído a 1,49 %. Teniendo en cuenta el proceso de marginación combinada con la tendencia de la migración a las zonas urbanas y a los Estados Unidos, algunos lingüistas están advirtiendo sobre la muerte inminente de las lenguas. En la actualidad se habla en náhuatl sobre todo en las zonas rurales por una clase empobrecida de agricultores de subsistencia indígenas. De acuerdo con el Instituto Nacional de Estadísticas de México, el INEGI, el 51 % de los hablantes de náhuatl están involucrados en el sector agrícola y 6 de cada 10 no reciben sueldos o ganan menos del salario mínimo</div>
+		</div>
+		</section>
+	
+	<h2><a name="Distribución y variantes dialectales" id="Distribución y variantes dialectales"></a><a href="#top">Distribución y variantes dialectales</a></h2>
+		<h3>Náhuatl Central</h3>
+			<img class="img-zoom" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Nahuatl_central.png" width="170"/>
+			<img  class="img-zoom" src=" http://nahuatl2.galeon.com/imagenes/nahuatl24.jpg" width="130"/> 
+			<p>En México la lengua náhuatl se habla principalmente en cinco estados: Guerrero, Puebla, Hidalgo, San Luis Potosí y Veracruz,donde tiene en cada estado una población arriba de 100 mil hablantes. En los estados de Morelos y Tlaxcala cuenta con una población dispersa o en localidades pequeñas; en promedio se puede hablar de una población de alrededor de 20 mil hablantes. En los estados de Tabasco, Michoacán, México, Oaxaca, Nayarit y Durango, así como los habitantes de Milpa Alta la presencia es mínima y con posibilidad de perderse (excepto en Oaxaca). </p>
+	
+		<section style="width: 100%">
+			<section style="width: 24%">
+				<h4>Historia  Náhuatl clásico</h4>
+				<p>En México la lengua náhuatl se habla principalmente en cinco estados: Guerrero, Puebla, Hidalgo, San Luis Potosí y Veracruz, donde tiene en cada estado una población arriba de 100 mil hablantes. En los estados de Morelos y Tlaxcala cuenta con una población dispersa o en localidades pequeñas; en promedio se puede hablar de una población de alrededor de 20 mil hablantes. En los estados de Tabasco, Michoacán, México, Oaxaca, Nayarit y Durango, así como los habitantes de Milpa Alta la presencia es mínima y con posibilidad de perderse (excepto en Oaxaca).</p>
+			</section>
+			<section style="width: 33%">
+				<h4>Náhuatl de Morelos</h4>
+				<p>Náhuatl de Morelos es una denominación genérica que designa a toda la población hablante de esta lengua en el estado, por lo que se presta a confusión. Para Ethnologue existen solo dos variantes, una con el código ISO 639-3 nhm que representa la mayoría de los nahuas, y con código nhg clasifica a los hablantes de Tetelcingo. El INALI divide el estado en cuatro variantes; el más representativo y al que le correspondería el código “nhm” lo denomina mexicano de Tetela del Volcán (es el náhuatl de Hueyapan y Santa Catarina); las otras variante son el mexicano de Temixco (náhuatl de Cuentepec); el mexicano central bajo (hablado en los municipios de Ayala y Jojutla) y por supuesto el náhuatl de Tetelcingo que denomina mexicano de Puente de Ixtla. La población total nahuahablante en el estado es de 19 241 personas </p>
+			</section>
+			<section style= "width: 33%">
+				<h4>Náhuatl de Tlaxcala</h4>
+				<p>   Náhuatl de Tlaxcala es una de las variantes que presenta una gran asimetría en su relación con el español, buena parte de los pueblos históricos que la hablan están siendo absorbidos por la mancha urbana de la Zona Metropolitana de Puebla-Tlaxcala, por lo que la han modificada al correr de los años su estructura y fonología; es hablado con más frecuencia en los municipios de la región occidental del Volcán la Malintzi y sur del estado, como Tetlahnocan, Contla de Juan Cuamatzi, Chiautempan, Teolocholco y San Pablo del Monte. Es denominado por el INALI mexicano del oriente central y tiene alrededor de 19 mil hablantes.</p>
+			</section>
+			<section style= "width: 20%">
+				<h4>Náhuatl de Tetelcingo</h4>
+				<p>  El náhuatl de Tetelcingo o mösiehuali aunque emparentado con el náhuatl clásico tuvo una evolución que ha obligado a los investigadores a desarrollar un sistema de escritura muy particular.42 El primer estudio de esta variante lo hizo William Cameron Townsend en 1935. Es hablado por menos de 3500 personas en el municipio de Cuautla de Morelos (Morelos).</p>
+			</section>
+		</section>
+
+	<h3><a name="Náhuatl Oriental" id="Náhuatl Oriental"></a>Náhuatl Oriental</h3>
+		<p>Por algunos considerada como la más conservadora o la que retomó características arcaicas como el uso del absolutivo en -t. Se tiene tres zonas muy marcadas, por una parte tenemos el “náhuatl de La Huasteca” con gran influencia de las variantes centrales; las variantes del centro de Veracruz y sur de Puebla con rasgos del Golfo; y las denominadas variantes del “Istmo” (o Golfo) con una fuerte sustitución del –tl por –t y un gran parecido al nawat Pipil.</p>    
+	    <section>
+			<section style= "width: 27%">  
+				<h4><a name="Náhuatl de Guerrero" id="Náhuatl de Guerrero"></a>Náhuatl de Guerrero</h4>
+				<p> El náhuatl guerrerense o náhuatl de Guerrero durante mucho tiempo fue clasificado en la rama central, sin embargo los estudios revelan un substrato de elementos orientales y los elementos centrales al parecer son innovaciones que se dieron a partir del siglo XIII.43 En el estado de Guerrero se presenta una variación dialectal que da origen a cuatro distintas variantes: dos de la “Periferia Occidental”; el “náhuatl de Tlamacazapa” y el “náhuatl de Coatepec”. El grueso de hablantes (cerca de 150 000) que son propiamente del “náhuatl de Guerrero” se ubican en la región centro-montaña del estado; la cuarta variante es el “náhuatl de Ometepec”, cerca de la Costa Chica y la cual tiene 430 hablantes. Esta última variante también es clasificada en la rama occidental</p>
+			</section>
+			<section style= "width: 26%">
+				<h4> <a name="Náhuatl del Istmo" id="Náhuatl del Istmo"></a>Náhuatl del Istmo</h4>
+				<p> El INALI engloba tres variantes bajo el nombre de náhuatl del Istmo (también llamado náhuatl istmeño),45 según los estudios del Instituto Lingüístico de Verano (SIL por sus siglas en inglés) le corresponde a la forma más extrema hacia el sur, en el municipio de Cosoleacaque, el código ISO 639-3 nhk, al de Mecayapan el código nhx y al de Pajapan aplica el código nhp. La variante más representativa y estudiada es la de Mecayapan. Tiene alrededor de 20 000 hablantes, distribuidos también en el pueblo de Tatahuicapan. En su proceso fonológico evolutivo esta lengua emparentada con el nawat tabasqueño y la lengua pipil usa de las letras /b/, /d/, /g/ y /r/. Además esta variante se caracteriza por el uso de vocales largas.</p>
+			</section>
+			<section style= "width: 23%">
+				<h4> <a name="Náhuatl huasteco" id="Náhuatl huasteco"></a>Náhuatl huasteco</h4>
+				<p> El náhuatl de La Huasteca, es una de las variedades con mayor número de hablantes. Aunque se reconocen como tres regiones distintas con particularidades la inteligibilidad es muy alta entre ellas. En el estado de Hidalgo (principalmente en los municipios de Huejutla, Jaltocán, Pisaflores y Tenango de Doria) es denominado por el INALI mexicano de la Huasteca hidalguense; en el noroeste de Veracruz es llamado náhuatl de la Huasteca veracruzana; y en el sureste de San Luis Potosí lo clasifican como náhuatl de la Huasteca potosina. Tiene alrededor de 464 mil hablantes en las tres áreas </p>
+			</section>
+			<section style= "width: 25%">
+				<h4><a name="Náhuatl de la Sierra Norte de Puebla" id="Náhuatl de la Sierra Norte de Puebla"></a>Náhuatl del Norte de Puebla</h4>
+				<div style="overflow: auto; max-height: 400px; margin-right: 5px;">
+				<p>La región norte de Puebla presenta una geografía bastante accidentada, lo que provoca más aislamiento entre las comunidades; esta situación generó que en un territorio reducido tengan tres variantes según Ethnologue, cuatro según el INALI. Las denominaciones son confusas pues utilizan casi las mismas palabras como “norte”, “sierra”, como veremos a continuación. El náhuatl del noreste central, (denominación del INALI) es equivalente al Nahuatl, Northern Puebla de Ethnologue con código NCJ. Para la institución mexicana es la variante hablada en los municipios de Acaxochitlán (Hidalgo), en los municipios poblanos de Chiconcuauhtla, Honey, Huauchinango, Jopala, Juan Galindo, Naupan, Pahuatlán, Tlaola, Tlapapcoya, Xicotepec, Zihuateutla. Esta variante en realidad es derivada del náhuatl central. Tiene 71 040 hablantes.48 Uno de los primeros estudios de la zona lo hizo Yolanda Lastra en Acaxochitlán en 1980 (véase bibliografía). Propiamente las variantes orientales son el náhuatl de la sierra noreste de Puebla,49 hablado en los municipios de Atempan, Ayotoxco, Cuautempan, Cuetzalan, Chignautla, Hueyapan, Hueytamalco, Huitzilán de Serdán, Ixtacamaxtitlán, Jonotla, Nauzontla, Tenampulco, Tetela de Ocampo, Teziutlán, Tlatlauquitepec, Tuzamapan, Xiutetelco, Xochiapulco, Xochitlán, Yaonahuac, Zacapoaxtla, Zautla, Zapotitlán, Zaragoza, Zoquiapan. Ethnologue le asigna el código AZZ (Nahuatl, Highland Puebla). Tiene 134 737 hablantes.50 En esta variante es muy marcado el uso de /t/ en las palabras en lugar de /tl/; los nativos llaman a su lengua “mexikanotlajtol” y se autodenominan “maseualmej” como equivalente de gente indígena. La otra variante llamada náhuatl de la sierra oeste de Puebla es hablada en Ahuacatlán, Aquixtla, Chignauapan, Tepetzintla, Zacatlán. Se le asocia el código NHI (Nahuatl, Zacatlán-Ahuacatlán-Tepetzintla). Tiene 19 482 hablantes. La cuarta variante que reconoce el INALI la denomina náhuatl alto del norte de Puebla y es hablada únicamente en los municipios de Francisco Z. Mena y Venustiano Carranza. Tiene 1350 hablantes.</p>
+				</div>
+			</section>	
+		</section>
+
+
+	<h3><a name="Náhuatl de la Periferia Occidental" id="Náhuatl de la Periferia Occidental"></a>Náhuatl de la Periferia Occidental</h3>
+		<p>Corresponden a esta rama las variantes de los estados de Michoacán, Colima, Jalisco, Nayarit y Durango. Aunque prácticamente está extinto en Jalisco y Colima, no ha sido declarado así por ninguna institución. Además se incluyen las hablas de las poblaciones de Tlamacazapa (municipio de Taxco, Guerrero), la de Coatepec Costales (municipio de Teloloapan, Guerrero) y la de Temascaltepec (Estado de México). Estas variantes son reconocidas por el uso de /l/ donde las variantes centrales usan /tl/. También están variantes presentan mayores cambios fonológicos y de morfo-sintaxis, por lo que muestra una mayor diferenciación respecto a otras regiones.</p>
+		<section>
+			<section>
+				<h4><a name="Náhuatl de Michoacán" id="Náhuatl de Michoacán"></a>Náhuatl de Michoacán</h4>
+				<p>El náhuatl de <a href="https://es.wikipedia.org/wiki/Michoac%C3%A1n">Michoacán</a> o mexicano central de occidente es hablado en la costa de Michoacán y parte de la sierra pegada a esta; ha sufrido una gran pérdida de hablantes pero es a la vez una de las que más se apega a sus tradiciones. Para recuperar su lengua se han implementado la educación indígena obligatoria durante los tres primeros ciclos escolares de la educación básica y se promueve la escritura literaria. Tiene 2809 hablantes</p>
+			</section>
+			<section>
+				<h4><a name="Náhuatl de Jalisco" id="Náhuatl de Jalisco"></a>Náhuatl de Jalisco</h4>
+				<p>El náhuatl de <a href="https://es.wikipedia.org/wiki/Jalisco">Jalisco</a> o mexicano del occidente era una variante que se habló al sur del estado y compartía rasgos con el “náhuatl de Michoacán”. Fue la primera variante en tener su propia gramática, fue elaborada en 1692 por Fray Juan Guerra y se llamó "Arte de la lengua mexicana. Que fue usual entre los indios del obispado de Guadalajara y de parte de los de Durango y Michoacán". Las imposiciones por parte de los gobiernos locales durante el Porfiriato fueron causa de una rápida pérdida del habla a principios del siglo XX, los gobiernos post-revolucionarios no mostraron una mejor disposición ni siquiera para su estudio, por lo que en la década de los sesentas y setentas cuando lingüistas e investigadores quisieron estudiarlo ya estaba moribundo</p>
+			</section> 
+			<section>
+				<h4><a name="Mexicanero" id="Mexicanero"></a>Mexicanero</h4>
+				<p>Náhuatl de <a href="https://es.wikipedia.org/wiki/Durango">Durango</a> o mexicano del noroeste es una variedad que también se le conoce como “náhuatl mexicanero” y se habla en el estado de Durango, en las poblaciones de San Pedro de las Jícoras, San Juan de Buenaventura entre otras. Los nahuas de esta región tienen una interacción muy activa con los tepehuanes, coras y huicholes con los que comparten territorio. Su supervivencia se ha debido al aislamiento y lo poco accesible de sus comunidades; viven de una economía autosuficiente; su lengua es la usual en la vida cotidiana. Aunque en su mayoría son bilingües no aprenden el español sino hasta después de los 5 ó 6 años. Cuenta con alrededor de 1300 hablantes.</p>
+			</section>
+		</section>
+
+		
+	<h3>  <a name="Pipil" id="Pipil"></a>Pipil</h3>
+	 	<p> El pipil (o nawat) es una de las variantes relacionada históricamente con los habitantes de Cuzcatlán, hoy El Salvador y parte de Nicaragua. Se tiene registro que también era hablada en poblaciones de Honduras. Hoy día está moribundo con solamente unas pequeñas comunidades de hablantes en El Salvador, se menciona de que sólo hay poco más de un centenar de hablantes. Ethnologue reporta 500 personas según estudio del 2015</p>
+	<h3>  <a name="Pochuteco" id="Pochuteco"></a>Pochuteco</h3>
+			<p>  El pochuteco fue un idioma nahua que se habló en la Costa Sur de Oaxaca, particularmente en el actual municipio de Pochutla, fue estudiado en 1912 por el antropólogo norteamericano Franz Boas, quien escribió una descripción hasta 1917 en International Journal of American Linguistics. En la actualidad se considera por algunos estudiosos como la primera variante que evolucionó antes del surgimiento de las ramas oriental y occidental, sin embargo, su estudio no fue completo por lo que en realidad su clasificación es dudosa</p>
+			
+	<h2> <a name="Enseñanza del náhuatl" id="Enseñanza del náhuatl"></a><a href="#top">Enseñanza del náhuatl</a> </h2>	
+		<section>	
+			<section style="width: 50%">
+				<p><img src="https://us.123rf.com/400wm/400/400/carlacastagno/carlacastagno1205/carlacastagno120500016/13662818-maestros-y-alumnos-en-el-aula-de-ilustracia-n-de-dibujos-animados-para-los-nia-os.jpg" width="150"  style="float: left"/>
+				La enseñanza de las lenguas nativas al igual que el español o cualquier idioma en el mundo se da en el seno materno de un hogar, es decir, se trasmite de padres a hijos. Esto conlleva toda una serie de factores socioculturales que determinan distintos grados de asimilación y proporcionan distintos niveles de comprensión e interpretación.Esencialmente podemos considerar dos tipos de hablantes: quienes simplemente reproducen el habla de su entorno incluso sin necesidad de aprender a escribirlo y por otro lado, quienes lo cultivan ya sea oral o escrito para desarrollar una mayor capacidad de comunicación clara. La lengua náhuatl durante la época prehispánica carecía de un sistema de escritura para su enseñanza, lo cual era de hecho innecesario, ya que aparte del aprendizaje en el hogar existían instituciones de educación obligatoria donde aprendían a distinguir el habla común (macehuallahtolli) del habla elegante (tecpillahtolli). En las escuelas indígenas (Telpochcalli, Calmecac o Cuicacalli) se ponía mucho énfasis en la adquisición de habilidades en oratoria, se aprendían de memoria largos discursos morales, históricos, obras de teatro y cantos. Esto hacía de la enseñanza de la lengua y en sí de la educación, un modelo de éxito. Al llegar los españoles y reconocer la utilidad del sistema lo aprovecharon, permitiendo que el náhuatl continuara en uso. Los peninsulares se vieron obligados a aprender el idioma nativo, lo que provocó a su vez que escribieran tratados para su comprensión y utilización para la catequización del indígena. En realidad la enseñanza del náhuatl siguió dándose de manera natural, por medio del uso generalizado.</p>
+				<div><iframe width="550" height="315" style="margin-left: 10px" src="https://www.youtube.com/embed/3XhhpmTnNEI" frameborder="0" allowfullscreen></iframe></div>
+			</section>
+			<section style="width: 50%">
+				<p>La creación de centros de estudio durante el Virreinato fue para el conocimiento y desarrollo de las ciencias —entre ellas la escolástica— y no para la alfabetización de los indígenas, sólo la nobleza nahua tenía derecho a aprender a leer y escribir su lengua, el grueso del pueblo tenía que acudir ante “escribanos” para la creación de algún documento. La situación colonial se extendió hasta el siglo XX, donde al inicio de la revolución mexicana la población indígena era 90% analfabeta. Con la creación de la Secretaria de Educación Pública durante el mandato de Álvaro Obregón, se planteó un departamento de educación indígena, sin embargo, continúa el debate entre el uso o desuso de las lenguas vernáculas; es hasta 1940 que con el apoyo del presidente Lázaro Cárdenas se implementan programas de educación en lengua materna, cuyos experimentos pilotos funcionan pero al establecerlos a nivel nacional pierden solidez. Gobiernos posteriores se centran en la castellanización, dejando de lado la enseñanza de las lenguas nativas, a mediados de los ochentas se cuenta ya con una tasa mayor al 70% de indígenas alfabetizados, sin embargo, sólo el 20% sabe escribir su propio idioma. Nuevos programas pilotos durante los ochenta y noventa por parte de la SEP fueron la base de una educación bicultural enfocada primero en la escritura y habla de la lengua materna, y a partir del cuarto ciclo escolar el aprendizaje del español.Durante el ciclo 1993-94 aparecen los primeros libros de texto gratuito en lengua náhuatl que cubrían hasta el tercer grado de educación primaria, línea que continúa hasta la actualidad (2016) ya que no se han elaborado los materiales para los grados superiores. Junto con la educación básica la SEP por medio del Instituto Nacional para la Educación de los Adultos (INEA) ha desarrollado material para alfabetizar a personas mayores de 15 años, esto durante la primera década de este siglo, cubriendo nueve zonas escolares indígenas y un número de variantes casi iguales, las cuales son:</p>
+				<div style="display: flex; flex-direction: column; margin: 0 auto;">
+					<ul>
+						<li>Mecayapan, Veracruz.</li>
+						<li> Pajapan, Veracruz.</li>
+						<li> Zaragoza, Veracruz.</li>
+					</ul>
+					<ul>
+						<li> Nahuat Sierra Nororiental (Cuetzalan), Puebla.</li>
+						<li> Chicontepec, Veracruz.</li>
+						<li> Guerrero.</li>
+					</ul>
+					<ul>
+						<li> De la Huasteca, Hidalgo.</li>
+						<li> Sierra Negra y Zongolica, Puebla y Veracruz.</li>
+						<li>Sierra Norte, Puebla.</li>
+					</ul>
+				</div>
+			</section>
+		</section>
+	
+	
+
+		<h2><a name="escritura" id="escritura"></a><a href="#top">Escritura</a></h2>
+		<p>Originalmente se trataba de una escritura pictográfica con rasgos silábicos o fonéticos tipo rebus. Este sistema de escritura fue adecuado para mantener registros tales como genealogías, información astronómica y listas de tributos, pero no representaba el vocabulario total de la lengua hablada de la forma en que los sistemas de escritura del "viejo mundo" o la escritura maya podían hacerlo. Ya en los tiempos coloniales además los códices fueron usados para enseñar la doctrina cristiana dando origen a los catecismos testerianos que podían ser “leídos” a la usanza anterior a la conquista de México.</p>
+		<p>Los españoles introdujeron el alfabeto latino, el cual fue utilizado para registrar una gran cantidad de poesía y prosa mexicana, algo que de cierta forma compensó la pérdida de miles de manuscritos mexicas quemados por los invasores europeos. Importantes trabajos de léxico, como el "Vocabulario" de Fray Alonso de Molina en 1571, y descripciones gramaticales, por ejemplo, el "Arte" de Horacio Carochi en 1645, fueron producidos usando variaciones de esta ortografía. La ortografía de Carochi usó cuatro diferentes diacríticos: el macrón (ā) para las vocales largas; el acento (á) para vocales cortas; el circunflejo (â) y el grave (à) para el saltillo en diferente posición.</p>
+		<p>Actualmente, existen dos convenciones diferentes que usan diferentes subconjuntos del alfabeto latino: la ortografía tradicional y la ortografía moderna que ha aceptado la SEP. La Secretaría de Educación Pública de México (SEP) es la institución que regula las reglas de la ortografía, y la que ha establecido un sistema de escritura práctico que se enseña en los programas de educación primaria bilingües en las comunidades indígenas. El siguiente cuadro recoge convenciones usadas en la ortografía clásica y en la ortografía de las variantes modernas para transcribir los diferentes fonemas:</p>
+			<div class="tabla_escritura">
+			<table>	
+				<tr>
+					<th>Fonemas</th>
+					<td>/a, a:/</td>
+					<td>/e, e:/</td>
+					<td>/i, i:/</td>
+					<td>/o, o:/</td>
+					<td>/p/</td>
+					<td>/t/</td>
+					<td>/k/</td>
+					<td>/kʷ/</td>
+					<td>/ʔ/</td>
+					<td>/ʦ/</td>
+					<td>/ʧ/</td>
+					<td>/t͡ɬ/</td>
+					<td>/s/</td>
+					<td>/ʃ/</td>
+					<td>/l/</td>
+					<td>/j/</td>
+					<td>/w/</td>
+					<td>/m/</td>
+					<td>/n/</td>
+				</tr>
+				<tr>
+					<th>Ort. Clásica</th>
+					<td>A a</td>
+					<td>E e</td>
+					<td>I i</td>
+					<td>O o</td>
+					<td>P p</td>
+					<td>T t</td>
+					<td>C c  Qu qu</td>
+					<td>Cu  cu-uc</td>
+					<td></td>
+					<td>Tz  tz</td>
+					<td>Ch  ch</td>
+					<td>Tl  tl</td>
+					<td>Z z C c</td>
+					<td>X x</td>
+					<td>L l</td>
+					<td>Y y</td>
+					<td>Hu  hu-uh</td>
+					<td>M m</td>
+					<td>N n</td>
+				</tr>
+				
+				<tr>
+					<th>Ort. Moderna</th>
+					<td>A a (Ā ā)</td>
+					<td>E e (Ē ē)</td>
+					<td>I i (Ī ī)</td>
+					<td>O o (Ō ō)</td>
+					<td>P p</td>
+					<td>T t</td>
+					<td>K k</td>
+					<td>Kw kw</td>
+					<td>H h (J j)</td>
+					<td>Ts ts</td>
+					<td>Ch ch</td>
+					<td>Tl tl</td>
+					<td>S s</td>
+					<td>X x</td>
+					<td>L l</td>
+					<td>Y y</td>
+					<td>W w</td>
+					<td>M m</td>
+					<td>N n</td>
+				</tr>
+			</table>
+		</div>
+
+	
+		<h2><a name="literatura" id="literatura"></a><a href="#top">Literatura</a></H2>
+		<p>Entre los pueblos nahuas existía un gran aprecio por la poesía, llamada «In Xōchitl In Cuīcatl», que significa «La Flor y El Canto» literalmente, aunque hay quien la interpreta como «palabra florida o florecida». La poesía era una de las actividades especialmente practicada entre la clase noble. Huexotzingo, Texcoco, Culhuacan eran las ciudades más renombradas por sus poesías. Ocasionalmente se organizaban encuentros poéticos en donde se reunían incluso aquellos dirigentes de ciudades en guerra. El más famoso ocurrió en Huexotzingo en 1490, organizado por Tecayehuatzin, señor de ese lugar. Detalles de este encuentro y muchas otras poesías se hallan en varios manuscritos recopilados después de la Conquista. El más famoso se llama Cantares mexicanos, y data del siglo XVI. Existe también otra recopilación de poesía, hecha por Juan Bautista Pomar, nieto de Nezahualcóyotl.</p>
+		<p>Bernardino de Sahagún menciona que los mexicas disfrutaban de representaciones dramáticas, algunas cómicas, otras eróticas, y otras sobre la vida de sus dioses; estas representaciones se transformaron en los tiempos coloniales con tonos cristianos-sincréticos dando origen a la danzas de conquista y a las representaciones de “pastorelas” hasta nuestros días</p>
+		<p>De los miles de manuscritos prehispánicos, solo sobrevive una docena de códices, dado que los europeos tenían la creencia que los pobladores indígenas eran adoradores del diablo y por consiguiente quemaron y destruyeron prácticamente toda su obra.</p>
+		<p>Existen también relaciones y documentos en náhuatl producidos por los «pilli» y tlacuilos, que poco después de la Conquista comenzaron a aprender a usar la escritura europea, como «Los anales de Tlatelolco» y el original náhuatl del Códice Florentino.</p>
+		<p>Algunos autores novohispanos como <a href="http://www.cervantesvirtual.com/obra-visor/el-tocotn-en-la-loa-para-el-auto-el-divino-narciso---criollismo-sorjuanino-0/html/f32c14e2-4d44-4175-8e41-8722846a39fe_2.html">Sor Juana Inés de la Cruz</a>, escribieron algunas obras en náhuatl. Poesía náhuatl (vid Nezahualcóyotl) y Nican Mopohua (vid Antonio Valeriano).</p>
+
+		
+		<h3><a name="mito" id="mito"></a>Mito</h3>
+		<div><iframe src="http://letrasparavolar.org/pdf/410.pdf" style="width:1000px; height:700px; border-color:black; frameborder="0"></iframe></div>
+		
+		
+		
+		<h3><a name="musica" id="musica"></a>Música</h3>
+		<p>Los archivos musicales conventuales y catedralicios de México también dan cuenta de música en lengua náhuatl, tal es el caso de los motetes In ilhuicac cihuapille y Dios itlazo nantzine atribuibles a Hernando Franco y extraídos del Códice Valdés. Gaspar Fernandes, Maestro de Capilla de la Catedral de Puebla en el siglo XVII, compuso una enorme cantidad de villancicos en náhuatl solo, o náhuatl y español; varios de ellos se encuentran en el “Cancionero Musical de Gaspar Fernandes”, importante documento conservado en el Archivo Musical de la Catedral de Oaxaca.</p>
+		<p>Xochipitzahuac es la canción más popular en el mundo náhuatl. El canto a la virgen de Guadalupe se remonta al periodo colonial novohispano, se desconoce el autor pero se cree que esta canción ha sido de dominio popular, según investigaciones dicen que Xochipitzahuac se comenzó a cantar después de las apariciones de la Virgen María.Xicochin conetzintleh-Xochipitzahuac, canto colonial de música barroca novohispana. En la actualidad la canción se sigue cantando en honor a la virgen de Guadalupe, diversas agrupaciones la han cantado como un huapango o con acompañamiento instrumentos cuerda (guitarras, bandurrias o violines)</p>
+		<div><iframe width="500" height="315" src="https://www.youtube.com/embed/gE4RdKH2BnU" frameborder="0" allowfullscreen></iframe><iframe width="500" height="315" src="https://www.youtube.com/embed/A9YBPKKMN1g" frameborder="0" allowfullscreen></iframe></div>
+		
+		<h2><a name="otros-idiomas" id="otros-idiomas"></a><a href="#top">El náhuatl y otros idiomas</a></h2>
+		<p>La convivencia de cinco siglos entre el náhuatl y el español en México ha tenido un impacto en ambas lenguas, y es el español la lengua que mayor integración ha tenido en el náhuatl respecto a otros idiomas. La influencia del náhuatl en el español se refleja especialmente en la gran cantidad de préstamos léxicos que el español ha tomado del náhuatl. En menor medida el español mexicano presenta marginalmente algunos rasgos fonéticos en parte atribuibles al náhuatl, incluyendo la africada lateral alveolar sorda t͡ɬ, pronunciada en el dígrafo tl. La influencia en la gramática en el español mexicano es todavía menos clara pero se ha argumentado que podría haber influido en la frecuencia de ciertas construcciones y tendencias ya presentes en el español general. Por otra parte el amplio bilingüismo náhuatl-español entre los hablantes de náhuatl ha influido en el náhuatl, tanto a nivel léxico como a nivel gramatical también.</p>
+		
+		<h3> <a name="influencia-2" id="influencia-2"></a>Influencia del náhuatl al español</h3>
+		<p>En la gramática, uno puede citar como influencia del náhuatl el uso del sufijo -le para darle un carácter enfático al imperativo. Por ejemplo: brinca -> bríncale, come -> cómele, pasa -> pásale, etcétera. Se considera que este sufijo es un cruce del pronombre de objeto indirecto español le con las interjecciones excitativas nahuas, tales como cuele. Sin embargo, este sufijo no es un verdadero pronombre de objeto indirecto, ya que se usa aún en construcciones no verbales, tales como: hijo -> híjole, ahora -> órale, que hubo -> quihúbole, etcétera.</p>
+		<p>El DRAE incluye alrededor de 200 préstamos del náhuatl al español, incluyendo: acocil, aguacate, ahuehuete, ajolote, amate, atole, ayate, cacahuate, camote, canica, capulín, chamagoso, chapopote, chapulín, chayote, chicle, chile, chipotle, chocolate, comal, copal, coyote, cuate, ejote, elote, epazote, escuincle, guacamole, guajolote, huachinango, huipil, hule, jacal, jícama, jícara, jitomate, macana, mecate, mezcal, milpa, mitote, mole, nopal, ocelote, ocote, olote, papalote, pepenar, petaca, petate, peyote, pinole, piocha, popote, tlalcoyote, pilcate, chalmichi, pulque, quetzal, tamal, tejocote, tianguis, tiza, tomate, tule, zacate, zapote, zopilote.</p>
+		<div class="palabras">
+			<figure>
+				<img class="img-zoom" width="90" height="75"src="http://cdn.wikifaunia.com/wp-content/uploads/2013/11/ajolote.jpg"/>
+				<figcaption>Ajolote</figcaption>
+			</figure>
+			<figure>
+				<img class="img-zoom" width="90" height="75"src="https://static.hogarmania.com/archivos/201511/brico_jardin_845_la-planta-del-cacahuete-1-1280x720x80xX.jpg" />
+				<figcaption>Cacahuete</figcaption>
+			</figure>
+			<figure>
+				<img class="img-zoom" width="90" height="75" src="http://www.duiops.net/seresvivos/galeria/mapaches/Animals%20Raccoons_Natural%20Bandit,%20Raccoon.jpg" />
+				<figcaption>Mapache</figcaption>
+			</figure>
+			
+			<figure>
+				<img class="img-zoom" width="90" height="75" src="http://cacaomovil.com/media/uploads/2015/04/28/cacao-elite.jpg"/>
+				<figcaption>Cacao</figcaption>
+			</figure>
+			<figure>
+				<img class="img-zoom" width="90" height="75" src="https://yunarikku93.files.wordpress.com/2012/07/coyote2_1.jpg"/>
+				<figcaption>Coyote</figcaption>
+			</figure>
+			<figure>
+				<img class="img-zoom" width="90" height="75" src="http://lyfruits.com/wp-content/uploads/2014/11/imagenes-FUERTE-aguacate.jpg"/>
+				<figcaption>Aguacate</figcaption>
+			</figure>
+			<figure>
+				<img class="img-zoom" width="90" height="75" src="https://www.dondevive.org/wp-content/uploads/2016/02/donde-vive-el-ocelote.jpg"/>
+				<figcaption>Ocelote</figcaption>
+			</figure>
+			
+			<figure>
+				<img  class="img-zoom" width="90" height="75" src="https://www.ecoterapeuta.com/wp-content/uploads/2017/04/chocolate.jpeg"/>
+				<figcaption>Chocolate</figcaption>
+			</figure>
+		</div>
+		<h3> <a name="influencia" id="influencia"></a> Influencia del español al náhuatl</H2>  </h3>
+		<p>Las variedades modernas de náhuatl muestran diferente grado de impacto por el español. La influencia del español se refleja especialmente en el préstamo masivo de preposiciones, conjunciones y nexos del español. Esto ha generado una reestructuración de ciertas partes de la sintaxis especialmente en el orden sintáctico y en el uso de ciertas construcciones. También el viejo sistema de cuenta en base 20 ha sido abandonado en favor del sistema decimal del español, por lo que sólo se usan los nombres nativos de números para números inferiores a diez o veinte.</p>
+		<p>También la generalización del uso del numeral ce '1' como equivalente del español 'un(o), una' es notorio en algunas variantes de náhuatl. Y también naturalmente se da una influencia del léxico del español, especialmente para designar realidades tecnológicas nuevas o términos un tanto técnicos para el modo de vida rural de la mayoría de hablantes.</p>
+		<p>Entre los préstamos del español al náhuatl son los siguientes: axno (< asno), cahuayoh (< caballo), cafetzin (< café), col, hicox (< higo), huino (< vino), limon (limón), melon, manzana, perexil (< perejil), rahuano (< rábano), torazno (< durazno), etc.</p>
+
+
+		<h2><a name="Descripción lingüística" id="Descripción lingüística"></a><a href="#top">Descripción lingüística</a></h2>
+		<p>El náhuatl es una lengua aglutinante, tipológicamente presenta rasgos típicos de lenguas núcleo final como tener:Incorporación verbal N+V, compuestos Adj+N. El auxiliar va detrás del verbo léxico. Estos ragos son típicos también de otras lenguas utoaztecas. Se considera que dentro de las lenguas utoaztecas, el huichol y el cora son las lenguas más cercanas al náhuatl, a parte del extinto pochuteco. Las lenguas más cercanas al náhuatl en la flexión verbal serían el mayo o el pima, ya que el cora y el huichol han innovado mucho en la flexión verbal. Además el náhuatl presenta innovaciones más recientes respecto a otras lenguas utoaztecas de más al norte, que lo acercan en parte a lenguas de núcleo inicial, esto se debería a la influencia de otras lenguas mesoamericanas (presumiblemente las lenguas otomangue o las totonaco-tepehua). La flexión nominal es bastante simple, aunque la conjugación verbal es bastante más compleja debido a la cantidad de morfemas aspectuales, modales, temporales, de sujeto, de objeto, direccionales, de número e incluso los elementos incorporados que puede llegar a tener. No existe una diferencia entre los verbos estativos y los adjetivos, e incluso puede afirmarse que no existe diferencia formal entre nombres y verbos, ya que la mayoría de formas nominales pueden tomar varios morfemas verbales.</p>
+		
+		<h3>  <a name="Fonología" id="Fonología"></a>Fonología</h3>
+		<p>El náhuatl clásico y la mayoría de variedades modernas emplean las siguientes consonantes:</p>
+		<div class="consonantes">
+			<table>
+				<tr>
+					<th></th>
+					<th>Bilabial</th>
+					<th>Alveolar</th>
+					<th>Palatal</th>
+					<th>Velar</th>
+					<th>Labiovelar</th>
+					<th>Glotal</th>
+				</tr>
+				<tr>
+					<td>Oclusiva</td>
+					<td>p </td>
+					<td>t </td>
+					<td> </td>
+					<td>k </td>
+					<td> kʷ</td>
+					<td> ʔ </td>
+				</tr>
+				<tr>
+					<td>Africada</td>
+					<td> </td>
+					<td> </td>
+					<td> t͡s, t͡ɬ</td>
+					<td> t͡ʃ</td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>Fricativa</td>
+					<td> </td>
+					<td> s</td>
+					<td> ʃ</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>Aproximante</td>
+					<td> </td>
+					<td> l</td>
+					<td> j</td>
+					<td> </td>
+					<td>w </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>Nasal</td>
+					<td>m</td>
+					<td> n</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+			</table>
+		</div>
+	
+	<p> Consonantes simples son: c, h, l, m, n, p, t, x, y y z. La pronunciación de la mayoría es igual que en Español.</p>
+
+    <p>c = [k] en todos los casos excepto antes de e ó i, en donde se pronuncia [s]
+    h = [ʔ] como una pausa entre dos palabras en Español.
+    l = [l]
+    m = [m]
+    n = [n]
+    p = [p]
+    t = [t]
+    x = [ʃ] esto es como el dígrafo "sh" en inglés
+    y = [j] como la "i" en "viento" o "hi" en "hielo" (consonántica)
+    z = [s] sólo puede escribirse antes de consonante, a, o ó u
+
+    Las consonantes dobles (tt, ll, chch,...) se pronuncian como una sola. Pero una palabra como nehhuātl "yo" se pronunciará [ˈneʔ.waːtɬ], primero una h, y después la otra.
+
+	Grupos de consonantes
+
+    ch = [tʃ] igual que la "ch" en Español.
+    hu = [w]
+    qu = [k]
+    tl = [tɬ] Es una "t" y una "l" seguidas, pero esta "l" se hace sin vibración de las cuerdas vocales.
+    tz = [ts] Una "t" y una "s" seguidas. No debe pronunciarse como "ch".
+
+    yi después de vocal e iy después de consonante son como una y simple [j]. Ēyi "tres" [eːj] y Quiyahuitl "lluvia" [ˈkja.witɬ] </p>
+
+
+	<p>El Náhuatl posee 4 vocales: a, e, i, o. Las cuatro se pronuncian igual que en Español. Cada vocal tiene una versión larga que se marca con un macrón ( ¯ ). Esta distinción es importante y permite diferenciar muchos pares como te- 'piedra(s)' / tē- 'gente', cuahuitl 'árbol' / cuāuhtli 'águila' o chichi 'perro' / chīchī 'mamar'.</p> 
+	<div class="vocales">
+		<ul>
+			<li>a = [a]</li>
+			<li>e = [e]</li>
+			<li>i = [i]</li>
+			<li>o = [o]</li>
+			<li>u = [w]</li>
+		</ul>
+		
+		<ul>
+			<li>ā = [aː]</li>
+			<li>ē = [eː]</li>
+			<li>ī = [iː]</li>
+			<li>ō = [oː]</li>
+		</ul>
+
+		<table>
+		  <tr>
+			<th></th>
+			<th>Anterior</th>
+			<th>Central</th>
+			<th>Posterior</th>
+		  </tr>
+		  <tr>
+			<td>Alta</td>
+			<td>i: i </td>
+			<td> </td>
+			<td> </td>
+		  </tr>
+		  <tr>
+			<td>Media</td>
+			<td> e: e</td>
+			<td> </td>
+			<td> o: o</td>
+		  </tr>
+		  <tr>
+			<td>Baja</td></td>
+			<td> </td>
+			<td> a; a</td>
+			<td> </td>
+		  </tr>
+		</table>
+	</div>
+
+    
+	<h3>  <a name="Morfología" id="Morfología"></a>Morfología</h3>
+		<p>El náhuatl tiene una morfología nominal reducida, la mayoría de nombres tiene dos formas diferentes según el caso (poseído/no-poseído) o sólo una forma indistinguida. El estado absolutivo en singular se marca con /-tli/ y el poseído con /-wi/ (ambos sufijos derivados del proto-utoazteca /*-ta/ y /*-wa/). En cuanto a las marcas de plural se usan sobre todo los sufijos /-meh/ (procedente del proto-utoazteca /*-mi/) y a veces /-tin/ y /-h/, y en menor grado se usa la reduplicación de la sílaba inicial coyotl 'coyote' cocoyoh 'coyotes', aunque esto en náhuatl a diferencia de lenguas uto-aztecas como el guarijío o el pima es marginal. La morfología verbal a diferencia de la nominal usa un gran número de morfemas prefijos o clíticos que indican, sujeto, objeto, direccional, marca reflexiva. El número se indica además de prefijo de persona mediante sufijos variados, igualmente el tiempo y el modo se indica mediante sufijos. La raíz verbal cambia de forma para indicar aspecto así para el náhuatl clásico se consideran tres tipos (llamados “temas”: largo, breve, medio)66 e incluye gran número de sufijos derivativos.</p>
+    <h3>  <a name="Sintaxis" id="Sintaxis"></a>Sintaxis</h3>
+		<p>El orden de los constituyentes es bastante libre aunque en los dialectos modernos tiende a SVO en oposición a VSO que eran más frecuentes en las etapas más antiguas de la lengua. Además las variantes modernas tienden a incluir interjecciones, conjunciones y adverbios prestados del español. El adjetivo suele preceder al nombre pero al igual que en la sintaxis en las variantes modernas el acomodo refleja la influencia del español, aunque en los sintagmas todavía prevalece que el modificador o complemento suele preceder al núcleo sintáctico. Eso se refleja también en el hecho de que la lengua tiene sufijos que funcionan como postposiciones (núcleos del sintagma apositivo) en lugar de usar preposiciones como en el español.</p>
+
+	<h4>Clases de palabras</h4>
+		<p>El náhuatl no distingue entre nombres, adjetivos o verbos, tal como en el sentido de las lenguas indoeuropeas. Por ejemplo, en náhuatl los adjetivos no son una clase diferente de los verbos estativos. Por otra parte cualquier raíz susceptible de funcionar "designativamente", es decir como nombre, puede ser interpretado "predicativamente" como forma de presente de un verbo. Así tlācatl puede significar tanto 'hombre' como 'Es un hombre' o cōcoyoh puede interpretarse como 'coyotes' o como 'son [unos] coyotes'.
+		<p>El verbo ser es un verbo atributivo que se caracteriza por haber siempre un pronombre que cumple al función de atributo (pronombre que en castellano sería el sujeto, pero que en náhuatl es atributo). Y lo que en castellano es atributo, en el náhuatl son complementos del atributo (y por tanto atributos). El hablante no dice Yo soy quien llora o Yo soy mexicano sino Soy yo quien llora (el que lloro) o Soy yo (el que es un) mexicano: nehhuatl in nichoca o nehhuatl in nimexihcatl. La consecuencia de ello es que el predicado pronominal debe llevar los prefijos verbales que lo identifican como atributo (n-ehhuatl, t-ehhuatl y y-ehhuatl —este último con lo que se conoce como adición prostética —). Y casi, puede afirmarse que lo que en castellano es el atributo (in nichoca o in nimexihcatl), en náhuatl es el sujeto, por lo que lleva el determinante relativo in, que es el determinante propio de los sujetos (eso sí, sin dejar de ser un simple complemento del atributo). Tan es así que si el verbo se enuncia en futuro Seré yo quien llore (el que lloraré) (Nehhuatl niez in nichocaz) se intercala la forma temporal niez entre el pronombre nehhuatl y el sujeto in nichocaz. En este último supuesto podemos afirmar que el pronombre no es necesario (Niez in nichocaz). De ahí que realmente la marca de determinación la da el pronombre (yehhuatl o nehhuatl), aun elidido, y lo que algunos creen que es el determinante —la partícula relativa in— no es tal determinante sino un pronombre relativo que introduce al sujeto en función de complemento del atributo. Por último, la mera existencia del pronombre relativo es marca suficiente que presupone la existencia del pronombre personal en función de atributo, lo que se denomina por los gramáticos antecedente (el antecedente, sea este yehhuatl o nehhuatl —o cualquier otro— no tiene que estar siempre expresado).</p>
+		<div class="recuadro">
+			<p>Algunas personas afirman que el náhuatl no posee preposiciones sino postposiciones, y carece de pronombres de relativo usando una cláusula introducida por el artículo (es decir, el artículo hace de complementador).Sin embargo es lo contrario lo que sucede, encontramos numerosos tipos de pronombres relativos:</p>
+		
+			<ol>
+				<li> El pronombre relativo sujeto (in):</li>
+
+				In huallauh.
+				'el que viene, la que viene, lo que viene'
+
+				<li> El pronombre relativo objeto (in aquin, in tlein):</li>
+
+				La que busco / A la que busco: In aquin nictemoa
+				A quien ama mi padre: In aquin quitlazohtla in notahtzin.
+				El que busco / Al que busco / A quien busco: In aquin nictemoa.
+				Lo que busco / Al que busco (objeto no humano): In tlein nictemoa.
+
+				La que busco / A la que busco (objeto no humano): In tlein nictemoa.
+				Lo que se sabe de Jesús (con un impersonal): In tlein mixmati itech Jesutzin
+
+				<li>  El pronombre interrogativo indirecto (tlein, aquin):</li>
+
+				No sabemos qué lee: Ahmo ticmatih tlein quixpohua.
+				No sabemos qué persona lee: Ahmo ticmatih aquin tlaixpohua.
+
+				<li>  El pronombre interrogativo directo (¿aquin?, ¿tlein?):</li>
+
+				¿A quién buscáis?: ¿Aquin anquitemoah?
+
+				<li>  El pronombre subordinante ca (que no es sujeto ni objeto ni interrogativo sino conjunción):</li>
+
+				El hombre que viene: In oquichtli ca huallauh.
+				El libro que leo no os gustaría: In amoxtli ca niquixpohua ahmo amechpactizquia.
+				Sepulté a los hombres que mató el ladrón: Niquimmiccaquimiloh in oquichtin ca oquimmictih in ichtecqui.
+				El hombre cuyo hijo viene hoy: In oquichtli ca ipiltzin huallauh axcan.
+				Me dijo que soy mexicano: Nechilhuih ca nehhuatl nimexihcatl.
+
+				<li>  El pronombre instrumental (In tlein ic):
+
+				He aquí las piedras que me lanzó: Nican cah in tetl in (tlein) ic onechmotlac.
+
+				<li> El pronombre instrumental en giro posesivo:</li>
+
+				El hombre cuyo hijo conozco: In oquichtli in (aquin) ipiltzin niquixmati.
+				Él (Dios) desea que haya todo lo necesario en la tierra para la vida de los justos y buenos: No iuhqui monelquitia oyez in tlein ic ihcazqueh tlalticpac in yectin ihuan in quenamihqueh8 9
+			</ol>
+		</div>
+	<p>Podemos afirmar que todo verbo admite construcciones atributivas en el náhuatl, siendo éstas su forma natural de expresión. Tratándose de una oración simple, antes hemos aclarado que el mexicano no dice Yo como sino Soy yo (el que / quien) como, con el giro atributivo de focalización que pone el énfasis en el atributo y caracterizado por el uso de la partícula in en función de pronombre relativo introductorio del sujeto. Pero dando un paso más, incluso se puede afirmar que toda oración compleja se descompone en una cascada de oraciones simples atributivas en giro de focalización. Bastarán unos ejemplos para ilustrar esta afirmación:</p>
+	<p>Para decir «la hormiga come la hoja» en el clásico se dice «(In) quicua (yehhuatl) in azcatl (yehhuatl) in (tlein) izhuatl». Pero en realidad hay dos oraciones atributivas que subyacen en la composición. La primera sería Es la hormiga quien come o Es ella quien come, la hormiga y la segunda Es ello lo que come, la hoja o Es la hoja lo que come. De ahí que la oración compleja pueda traducirse como Quien come es la hormiga, es (a) la hoja o Es quien come la hormiga, es a la hoja.</p>
+	<p>Y para decir «el hijo ama al padre»: «Quitlazohtla (yehhuatl) in tepiltzin (yehhuatl) in (aquin) tetahtzin».</p>
+	<p>El pronombre en función de atributo yehhuatl no siempre es un pronombre personal absoluto («él»), pues puede hacer las veces de pronombre demostrativo («ese» —con sus variantes «ese de ahí» que equivale a «éste» y «ese de allá» que equivale a «aquél»). El náhuatl clásico no distingue, a diferencia de las lenguas indoeuropeas, entre los distintos tipos de pronombres.</p>
+	<p>Cosa diferente es que, tras la llegada de los conquistadores, todo lo aquí descrito se transforme radicalmente. Además de categorías léxicas como las anteriores el náhuatl moderno posee determinantes y marcas pronominales tal como hace el español.</p>
+	<p>Una peculiaridad de los verbos transitivos es que aparecen con marcas tanto de sujeto como de objeto. Así encontramos los pronombres indefinidos te-, tla-, c-, -qu-...</p>
+		 
+	<H4>Focalización</H4>
+	<p>Este giro es esencial para entender ciertas expresiones del tiempo indicativo:
+	En el náhuatl clásico muchas veces no se dice él llora sino es él quien llora o es él el que llora: yehhuatl choca. Igualmente, no se dice la mujer grita sino es ella la mujer quien grita, giro que se conoce como focalización o énfasis: </p>
+	 <p> Cuando aparece la partícula in sirve para indicar que estamos ante un complemento del atributo, ante algo que también es atributo. Y el sujeto, pese a ser una subordinada de relativo, no lleva la partícula in, porque no es atributo.</p>
+	 <p> Un caso diferente donde no se trataría de una mujer precisa, sino de la mujer en general sería: </p>
+	 <section style="justify-content: center">
+		<section>
+			<p> A) un modelo para expresar el indicativo: </p>
+			<table>	
+				<tr>
+					<th>Atributo</th>
+					<th>Sujeto</th>
+				</tr>
+				<tr>
+					<td> (Soy) yo </td>
+					<td> (quien) como</td>
+				</tr>
+				<td> Nehhuatl </td>
+				<td>nitlacua.</td>
+			</table> 
+		</section>
+	 
+		<section>
+			<p> B) otro para introducir aposiciones como complemento al atributo: </p>
+			<table>
+				<tr>
+					<th>Atributo</th>
+					<th>Sujeto</th>
+				</tr>
+				<tr>
+					<td>Yo<b>que</b>te amo</td>
+					<td>no voy</td>
+				</tr>
+					<td> Nehhuatl <b>in</b>nimitztlazohtla </td>
+					<td>ahmo niyauh.</td>
+			 </table>
+		</section>
+	 </section>
+
+	<p>Pero por diversos factores hay autores, como Michel Launey, que han entendido que en el giro de énfasis lo que se enfatiza no es el atributo sino el sujeto:</p>
+		<p>(1a) Tzahtzi in cihuātl ('es quien grita la mujer' o 'la mujer grita')</p>
+		<p>(1b) Ca cihuātl in tzahtzi ('Es una mujer la que grita')</p>
+
+		<p>El náhuatl se distingue por usar un número reducido de lexemas para construir gran cantidad de palabras, lo cual hace que casi toda palabra admita una descomposición en raíces, en su mayoría bisilábicas.</p>  
+
+	<footer>Guía básica de náhuatl</footer>
+	</body>
+
+</html>
+
+
+
+
+
+
